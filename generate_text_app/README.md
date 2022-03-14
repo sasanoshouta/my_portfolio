@@ -1,1 +1,35 @@
 # 文章生成補助アプリ
+
+## 概要
+AWSを活用し、特定分野の文章から人が過去に作成した文章を学習し、入力される<br>
+文章から人が期待する文章を生成し、業務支援を行う事を目的とする。<br>
+
+## アプリイメージ図
+![image](https://user-images.githubusercontent.com/99741475/158188376-b5cd45ad-0707-4694-a725-27d6ed58e1e4.png)
+
+## 各フォルダについて
+### text_preprocessing_for_T5Model
+過去に人が作成した文章と生成文章（正解データ）の前処理を実行する為の.pyファイル郡<br>
+extract_text_and_create_train_data_japanese.py:<br>
+    *　日本語の文章データを前処理する.pyファイル
+extract_text_and_create_train_data_ver_eng.py:<br>
+    *　英語の文章データを前処理する.pyファイル
+
+### T5Model_on_jupyter_notebook
+settings.py:<br>
+    *　T5モデルの設定が記述された.pyファイル
+train.py:<br>
+    *　T5モデルの学習フェイズが記述された.pyファイル
+predictor.py:<br>
+    *　T5モデルの推論フェイズが記述された.pyファイル
+train_and_create_endpoint.py:<br>
+    *　学習したT5モデルをAWS上にデプロイし、エンドポイント化するフェイズが記述された.pyファイル
+
+### custom_container
+T5Model_on_jupyter_notebook内のtrain.py, predictor.pyファイルをDocker image内に配置し、AWS SageMaker上でエンドポイント化し推論が実行できるようにする為のファイル郡<br>
+
+### streamlit
+generate_text_app.py:<br>
+    *　EC2上に配置し、指定したエンドポイントにテキストリクエストを送り推論結果を取得・表示するWEBアプリを表示する.pyファイル<br>
+アプリ起動イメージ：<br>
+
