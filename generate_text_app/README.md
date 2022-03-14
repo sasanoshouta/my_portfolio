@@ -35,5 +35,6 @@ T5Model_on_jupyter_notebook内のtrain.py, predictor.pyファイルをDocker ima
 <hr>
 generate_text_app.py:<br>
     *　EC2上に配置し、指定したエンドポイントにテキストリクエストを送り推論結果を取得・表示するWEBアプリを表示する.pyファイル<br>
+
 アプリ起動イメージ：<br>
 
