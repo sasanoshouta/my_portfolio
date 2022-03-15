@@ -37,5 +37,5 @@ generate_text_app.py:<br>
     *　EC2上に配置し、指定したエンドポイントにテキストリクエストを送り推論結果を取得・表示するWEBアプリを表示する.pyファイル<br>
 <br>
 アプリ起動イメージ：<br>
-![testitemm 003](https://user-images.githubusercontent.com/99741475/158328504-de1cde11-f7a7-4253-9f1a-0421a058e3f1.png)
+![testitemm](https://user-images.githubusercontent.com/99741475/158329087-ca678623-856a-41c6-86ff-42ff016a6ed3.png)
 
