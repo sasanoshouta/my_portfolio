@@ -7,6 +7,10 @@ AWSを活用し、特定分野の文章から人が過去に作成した文章�
 ## アプリイメージ図
 ![app_image](https://user-images.githubusercontent.com/99741475/158192103-1e2251d8-ff3d-40d7-b4a0-4fd941ae77c0.png)
 
+## アプリ起動イメージ
+![testitemm](https://user-images.githubusercontent.com/99741475/158329087-ca678623-856a-41c6-86ff-42ff016a6ed3.png)
+
+
 ## 各フォルダについて
 ### text_preprocessing_for_T5Model
 <hr>
@@ -35,7 +39,3 @@ T5Model_on_jupyter_notebook内のtrain.py, predictor.pyファイルをDocker ima
 <hr>
 generate_text_app.py:<br>
     *　EC2上に配置し、指定したエンドポイントにテキストリクエストを送り推論結果を取得・表示するWEBアプリを表示する.pyファイル<br>
-<br>
-#### アプリ起動イメージ
-![testitemm](https://user-images.githubusercontent.com/99741475/158329087-ca678623-856a-41c6-86ff-42ff016a6ed3.png)
-
