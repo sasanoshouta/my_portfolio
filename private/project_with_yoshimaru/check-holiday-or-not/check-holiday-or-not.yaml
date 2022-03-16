@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: dynamoDBから店舗の休日状況を参照し、各店舗へのサービス稼働フラグを変更する関数
+Resources:
+  checkholidayornot:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: lambda_function.lambda_handler
+      Runtime: python3.8
+      CodeUri: .
+      Description: dynamoDBから店舗の休日状況を参照し、各店舗へのサービス稼働フラグを変更する関数
+      MemorySize: 128
+      Timeout: 900
+      Role: 'arn:aws:iam::hogehoge:role/check_holiday_or_not_role'
+      Events:
+        Schedule1:
+          Type: Schedule
+          Properties:
+            Schedule: cron(0 15 * * ? *)
